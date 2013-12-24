@@ -1,0 +1,81 @@
+<%= render 'layouts/navinner' %>
+<style> 
+ body {
+ 	/*background-color:#E7E7E7;*/
+ 	background-color: rgba(231, 231, 231, 0.44);
+ }
+</style>
+
+<div class="container"> 
+<div class="span8">
+	<div class="info-box">
+		<h5>More about <%= @user.name %></h5>
+
+		<p><%= @user.aboutme %></p><br/>
+		<p><%= @user.address %></p><br/>
+	</div>
+	<div class="info-box">
+		<h5>User's Marketplace Listings</h5>
+
+		<table class="table table-striped" style="margin-right:10px;" >
+  <tr>
+    <th style="width: 30%;">Item name</th>
+    <th style="width: 30%;">Channel</th>
+    <th style="width: 20%;">Listing price</th>
+    <!--<th style="width: 8%;">Item condition</th>
+    <th style="width: 8%;">City</th>
+    <th style="width: 12%;">State</th>-->
+    <th style="width: 20%;"></th>
+  </tr>
+
+
+  <tr>
+    <td>Ipad Mini (Used)</td>
+    <td>Amazon</td>
+    <td>$100.00</td>
+    <td>
+    <button class="btn"><%= link_to 'View' %></button>
+  </tr>
+  <tr>
+    <td>Ipad Mini (Used)</td>
+    <td>Amazon</td>
+    <td>$100.00</td>
+    <td>
+    <button class="btn"><%= link_to 'View' %></button>
+  </tr>
+</table>
+	</div>
+	<div class="info-box">
+		<h5>User Reviews</h5>
+	</div>
+</div>
+
+
+<div class="span5">
+<br/>
+
+	<div class="user-box">
+		<p>
+		<div class="user-name"><%= @user.name %>
+		<br/>
+		<div style="width:200px;"><span style="font-size:10pt;margin-top:15px;">Currently Selling on Amazon, Etsy, and Uvalue</span></div>
+		<div class="btn-group" style="margin-top:20px;">
+				<button class="btn btn-success" style="text-decoration:none;" id="green"><%= link_to "Connect", dashboard_neighborhoods_path %></button>
+				<button class="btn btn-success" id="green"><%= link_to "Message", dashboard_neighborhoods_path  %></button>
+			</div>
+		</div>
+
+		<%= gravatar_for @user %></br>
+
+		<!--<%= @user.email %>
+
+		<br/>
+		<strong>URL</strong> <%= link_to user_path(@user), user_path(@user) %>-->
+		</p>
+	</div>
+	<div class="verification-box">
+		<h5><%= @user.name %>'s Verifications</h5>
+	</div>
+</div>
+
+</div>

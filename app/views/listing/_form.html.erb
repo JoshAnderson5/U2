@@ -1,0 +1,20 @@
+<%= simple_form_for(:listing, html: { class: "form-horizontal"}) do |f| %>
+  <%= f.error_notification %>
+
+          <%= f.label :website %>
+          <%= f.select :website, [['Uvalue Local','Uvalue'],['Amazon','Amazon'],['Ebay','Ebay']] %><br/><br/>
+
+          <%= f.input :item_name, label: "Item Name"  %>
+          <%= f.input :listed_price, label: "Listing Price" %>
+          <%= f.input :location, label: "City, State "  %>
+          <%= f.input :item_condition %>
+          <%= f.input :sku, label: "Item Code" %>
+          <%= f.hint 'Can be UPC, EAN, ISBN, or ASIN' %>
+          <%= f.input :item_description, as: :text, input_html: { rows: "3", :style => "width: 295px;"} %>
+          <!--<div class="form-inputs">
+          </div>-->
+              <div class="form-actions" style="width: 115px;">
+                <%= f.button :submit, class:  "btn btn-primary" %>
+              </div>
+     
+<% end %>

@@ -1,0 +1,615 @@
+<%= render 'layouts/navinner' %>
+
+<!--<div style="text-align:center;">
+<%= link_to image_tag("SquareLogo.png", :alt => "Uvalue Logo", :style => "width:200px;"), dashboard_home_path %>
+</div>-->
+
+<h2 style="text-align:center;">You Can Find the Items Your Looking for Here</h2>
+<p style="text-align:center; margin: 0 auto; width:700px;">With the Uvalue local marketplace you to directly engage college and neighborhood communities with your products or find the items you need within close proximity to your location. We've also added the right search bar for finding business and organization's sponsored pages in your area</p>
+
+<div class="controller dark" style="width:100%;">
+<div class="searchnav">
+	<li><%= link_to college_home_path do %>All Categories<% end  %></li>
+	<li><%= link_to neighborhoods_home_path do %>Search By<% end  %></li>
+	<li><%= link_to sellanything_home_path do %>Communities<% end  %></li>
+</div>
+</div>
+
+
+<div class="search-layout">
+		<div class="span3">
+			<div class="filter">
+					<div class="panel-border collapsable_filters">
+					  <h4 class="panel-header-light">
+					    Community type
+					    <i class="icon icon-caret-down position-right"></i>
+					  </h4>
+					  <ul id="room-type-container" class="unstyled search_filter_content panel-padding"><li>
+					  <label class="checkbox ">
+					    <input type="checkbox" id="room_type_0" name="room_types" value="Entire home/apt">
+					      <span class="label-recessed label-recessed-skinny position-right">1000+</span>
+					    Entire home/apt
+					  </label>
+					</li>
+					<li>
+					  <label class="checkbox ">
+					    <input type="checkbox" id="room_type_1" name="room_types" value="Private room">
+					    
+					      <span class="label-recessed label-recessed-skinny position-right">1000+</span>
+					    
+					    Private room
+					  </label>
+					</li>
+					<li>
+					  <label class="checkbox ">
+					    <input type="checkbox" id="room_type_2" name="room_types" value="Shared room">
+					    
+					      <span class="label-recessed label-recessed-skinny position-right">598</span>
+					    
+					    Shared room
+					  </label>
+					</li>
+					<li><a href="javascript:void(0);" class="show_more_link">Show More...</a></li></ul>
+
+					  <h4 class="panel-header-light price-filter-container">
+					    Price
+					    <i class="icon icon-caret-down position-right"></i>
+					  </h4>
+					  <div class="search_filter_content panel-padding price-filter-container">
+					    <ul id="slider_values" class="unstyled slider-values">
+					      <li id="slider_user_min" class="label position-left">$10</li>
+					      <li id="slider_user_max" class="label position-right">$1000+ </li>
+					    </ul>
+					    <div id="slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></div>
+					  </div>
+
+					    <h4 class="panel-header-light">
+					      Connections
+					      <i class="icon icon-caret-down position-right"></i>
+					    </h4>
+					    <ul id="connections-container" class="unstyled search_filter_content panel-padding"><li>
+					  <label class="checkbox ">
+					    <input type="checkbox" id="connected" name="connected" value="connected">
+					    
+					      <span class="label-recessed label-recessed-skinny position-right">565</span>
+					    
+					    Social Connections
+					  </label>
+					</li>
+					<li><a href="/social/" target="_blank">Learn More!</a></li></ul>
+
+					  <h4 class="panel-header-light">
+					    Neighborhood
+					    <i class="icon icon-caret-down position-right"></i>
+					  </h4>
+					  <ul id="neighborhoods-container" class="unstyled search_filter_content panel-padding"><li>
+					  <label class="checkbox ">
+					    <input type="checkbox" id="neighborhood_0" name="neighborhoods" value="Manhattan">
+					    
+					      <span class="label-recessed label-recessed-skinny position-right">1000+</span>
+					    
+					    Manhattan
+					  </label>
+					</li>
+					<li>
+					  <label class="checkbox ">
+					    <input type="checkbox" id="neighborhood_1" name="neighborhoods" value="Brooklyn">
+					    
+					      <span class="label-recessed label-recessed-skinny position-right">1000+</span>
+					    
+					    Brooklyn
+					  </label>
+					</li>
+					<li>
+					  <label class="checkbox ">
+					    <input type="checkbox" id="neighborhood_2" name="neighborhoods" value="Midtown">
+					    
+					      <span class="label-recessed label-recessed-skinny position-right">1000+</span>
+					    
+					    Midtown
+					  </label>
+					</li>
+					<li>
+					  <label class="checkbox ">
+					    <input type="checkbox" id="neighborhood_3" name="neighborhoods" value="Williamsburg">
+					    
+					      <span class="label-recessed label-recessed-skinny position-right">1000+</span>
+					    
+					    Williamsburg
+					  </label>
+					</li>
+					<li><a href="javascript:void(0);" class="show_more_link">Show More...</a></li></ul>
+
+					  <h4 class="panel-header-light">
+					    Amenities
+					    <i class="icon icon-caret-down position-right"></i>
+					  </h4>
+					  <ul id="amenities-container" class="unstyled search_filter_content panel-padding"><li>
+					  <label class="checkbox ">
+					    <input type="checkbox" id="amenity_0" name="amenities" value="4">
+					    
+					      <span class="label-recessed label-recessed-skinny position-right">1000+</span>
+					    
+					    Wireless Internet
+					  </label>
+					</li>
+					<li>
+					  <label class="checkbox ">
+					    <input type="checkbox" id="amenity_1" name="amenities" value="1">
+					    
+					      <span class="label-recessed label-recessed-skinny position-right">1000+</span>
+					    
+					    TV
+					  </label>
+					</li>
+					<li>
+					  <label class="checkbox ">
+					    <input type="checkbox" id="amenity_2" name="amenities" value="8">
+					    
+					      <span class="label-recessed label-recessed-skinny position-right">1000+</span>
+					    
+					    Kitchen
+					  </label>
+					</li>
+					<li><a href="javascript:void(0);" class="show_more_link">Show More...</a></li></ul>
+
+					  <h4 class="panel-header-light">
+					    Keywords
+					    <i class="icon icon-caret-down position-right"></i>
+					  </h4>
+					  <ul class="unstyled search_filter_content panel-padding">
+					    <li class="clearfix">
+					      <input class="input-medium position-left" type="text" name="keywords" id="keywords" placeholder="Enter Keywords">
+					      <a id="submit_keyword" href="#" class="btn position-right only-icon">
+					        <i class="icon icon-search"></i>
+					      </a>
+					    </li>
+					  </ul>
+					</div>
+			</div>
+		</div>
+
+
+		<div class="span9">
+
+		<div class="well">Your Search has reveal (X) results</div>
+
+		<ul id="results" class="unstyled">
+		          <li id="room_557018" class="search_result" data-hosting-id="557018" data-host-id="2687671">
+				  <div class="pop_image_small">
+				    <a href="/rooms/557018" class="image_link matte-media-box" title="GREAT Private Room in Chelsea!">
+				        <img alt="GREAT Private Room in Chelsea!" class="search_thumbnail listing-default" width="114" height="74" src="https://a2.muscache.com/pictures/7082872/x_small.jpg" data-original="https://a2.muscache.com/pictures/7082872/x_small.jpg" title="GREAT Private Room in Chelsea!" style="display: inline;">
+				      
+				      <div class="map_number">1</div>
+				    </a>
+				  </div>
+
+				  <div class="user_thumb">
+				      <a href="/users/show/2687671" class="inset-media-box">
+				        <img alt="Tom" height="36" class="user-default" data-original="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" width="36" src="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" style="display: inline;">
+				        <div class="shadow"></div>
+				      </a>
+				  </div>
+
+				  <h3 class="room_title overflow-ellipsis">
+				    <a class="name" href="/rooms/557018">GREAT Private Room in Chelsea!</a>
+				  </h3>
+				  <div class="price">
+				    <div class="price_data">
+				      <sup>$</sup>85
+				    </div>
+				    <div class="price_modifier">
+				        &nbsp;
+				        For Sale
+				    </div>
+				  </div>
+				  <div class="descriptor descriptor-gray overflow-ellipsis">
+				    Lorem Ipsum
+				  </div>
+				  <ul class="reputation unstyled">
+				      <li class="badge badge_type_reviews-bubble">
+				        <span class="badge_image">
+				          <span class="badge_text reviews-bubble">
+				            55
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">reviews</span>
+				      </li>
+				      <li class="badge badge_type_other-reviews">
+				        <span class="badge_image">
+				          <span class="badge_text other-reviews">
+				            67
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">other reviews</span>
+				      </li>
+				  </ul>
+				  
+				</li>
+		 </ul>
+
+		 <ul id="results" class="unstyled">
+		          <li id="room_557018" class="search_result" data-hosting-id="557018" data-host-id="2687671">
+				  <div class="pop_image_small">
+				    <a href="/rooms/557018" class="image_link matte-media-box" title="GREAT Private Room in Chelsea!">
+				        <img alt="GREAT Private Room in Chelsea!" class="search_thumbnail listing-default" width="114" height="74" src="https://a2.muscache.com/pictures/7082872/x_small.jpg" data-original="https://a2.muscache.com/pictures/7082872/x_small.jpg" title="GREAT Private Room in Chelsea!" style="display: inline;">
+				      
+				      <div class="map_number">1</div>
+				    </a>
+				  </div>
+
+				  <div class="user_thumb">
+				      <a href="/users/show/2687671" class="inset-media-box">
+				        <img alt="Tom" height="36" class="user-default" data-original="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" width="36" src="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" style="display: inline;">
+				        <div class="shadow"></div>
+				      </a>
+				  </div>
+
+				  <h3 class="room_title overflow-ellipsis">
+				    <a class="name" href="/rooms/557018">GREAT Private Room in Chelsea!</a>
+				  </h3>
+				  <div class="price">
+				    <div class="price_data">
+				      <sup>$</sup>85
+				    </div>
+				    <div class="price_modifier">
+				        &nbsp;
+				        For Sale
+				    </div>
+				  </div>
+				  <div class="descriptor descriptor-gray overflow-ellipsis">
+				    Lorem Ipsum
+				  </div>
+				  <ul class="reputation unstyled">
+				      <li class="badge badge_type_reviews-bubble">
+				        <span class="badge_image">
+				          <span class="badge_text reviews-bubble">
+				            55
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">reviews</span>
+				      </li>
+				      <li class="badge badge_type_other-reviews">
+				        <span class="badge_image">
+				          <span class="badge_text other-reviews">
+				            67
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">other reviews</span>
+				      </li>
+				  </ul>
+				  
+				</li>
+		 </ul>
+
+		 <ul id="results" class="unstyled">
+		          <li id="room_557018" class="search_result" data-hosting-id="557018" data-host-id="2687671">
+				  <div class="pop_image_small">
+				    <a href="/rooms/557018" class="image_link matte-media-box" title="GREAT Private Room in Chelsea!">
+				        <img alt="GREAT Private Room in Chelsea!" class="search_thumbnail listing-default" width="114" height="74" src="https://a2.muscache.com/pictures/7082872/x_small.jpg" data-original="https://a2.muscache.com/pictures/7082872/x_small.jpg" title="GREAT Private Room in Chelsea!" style="display: inline;">
+				      
+				      <div class="map_number">1</div>
+				    </a>
+				  </div>
+
+				  <div class="user_thumb">
+				      <a href="/users/show/2687671" class="inset-media-box">
+				        <img alt="Tom" height="36" class="user-default" data-original="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" width="36" src="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" style="display: inline;">
+				        <div class="shadow"></div>
+				      </a>
+				  </div>
+
+				  <h3 class="room_title overflow-ellipsis">
+				    <a class="name" href="/rooms/557018">GREAT Private Room in Chelsea!</a>
+				  </h3>
+				  <div class="price">
+				    <div class="price_data">
+				      <sup>$</sup>85
+				    </div>
+				    <div class="price_modifier">
+				        &nbsp;
+				        For Sale
+				    </div>
+				  </div>
+				  <div class="descriptor descriptor-gray overflow-ellipsis">
+				    Lorem Ipsum
+				  </div>
+				  <ul class="reputation unstyled">
+				      <li class="badge badge_type_reviews-bubble">
+				        <span class="badge_image">
+				          <span class="badge_text reviews-bubble">
+				            55
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">reviews</span>
+				      </li>
+				      <li class="badge badge_type_other-reviews">
+				        <span class="badge_image">
+				          <span class="badge_text other-reviews">
+				            67
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">other reviews</span>
+				      </li>
+				  </ul>
+				  
+				</li>
+		 </ul>
+
+		 <ul id="results" class="unstyled">
+		          <li id="room_557018" class="search_result" data-hosting-id="557018" data-host-id="2687671">
+				  <div class="pop_image_small">
+				    <a href="/rooms/557018" class="image_link matte-media-box" title="GREAT Private Room in Chelsea!">
+				        <img alt="GREAT Private Room in Chelsea!" class="search_thumbnail listing-default" width="114" height="74" src="https://a2.muscache.com/pictures/7082872/x_small.jpg" data-original="https://a2.muscache.com/pictures/7082872/x_small.jpg" title="GREAT Private Room in Chelsea!" style="display: inline;">
+				      
+				      <div class="map_number">1</div>
+				    </a>
+				  </div>
+
+				  <div class="user_thumb">
+				      <a href="/users/show/2687671" class="inset-media-box">
+				        <img alt="Tom" height="36" class="user-default" data-original="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" width="36" src="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" style="display: inline;">
+				        <div class="shadow"></div>
+				      </a>
+				  </div>
+
+				  <h3 class="room_title overflow-ellipsis">
+				    <a class="name" href="/rooms/557018">GREAT Private Room in Chelsea!</a>
+				  </h3>
+				  <div class="price">
+				    <div class="price_data">
+				      <sup>$</sup>85
+				    </div>
+				    <div class="price_modifier">
+				        &nbsp;
+				        For Sale
+				    </div>
+				  </div>
+				  <div class="descriptor descriptor-gray overflow-ellipsis">
+				    Lorem Ipsum
+				  </div>
+				  <ul class="reputation unstyled">
+				      <li class="badge badge_type_reviews-bubble">
+				        <span class="badge_image">
+				          <span class="badge_text reviews-bubble">
+				            55
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">reviews</span>
+				      </li>
+				      <li class="badge badge_type_other-reviews">
+				        <span class="badge_image">
+				          <span class="badge_text other-reviews">
+				            67
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">other reviews</span>
+				      </li>
+				  </ul>
+				  
+				</li>
+		 </ul>
+
+		<ul id="results" class="unstyled">
+		          <li id="room_557018" class="search_result" data-hosting-id="557018" data-host-id="2687671">
+				  <div class="pop_image_small">
+				    <a href="/rooms/557018" class="image_link matte-media-box" title="GREAT Private Room in Chelsea!">
+				        <img alt="GREAT Private Room in Chelsea!" class="search_thumbnail listing-default" width="114" height="74" src="https://a2.muscache.com/pictures/7082872/x_small.jpg" data-original="https://a2.muscache.com/pictures/7082872/x_small.jpg" title="GREAT Private Room in Chelsea!" style="display: inline;">
+				      
+				      <div class="map_number">1</div>
+				    </a>
+				  </div>
+
+				  <div class="user_thumb">
+				      <a href="/users/show/2687671" class="inset-media-box">
+				        <img alt="Tom" height="36" class="user-default" data-original="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" width="36" src="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" style="display: inline;">
+				        <div class="shadow"></div>
+				      </a>
+				  </div>
+
+				  <h3 class="room_title overflow-ellipsis">
+				    <a class="name" href="/rooms/557018">GREAT Private Room in Chelsea!</a>
+				  </h3>
+				  <div class="price">
+				    <div class="price_data">
+				      <sup>$</sup>85
+				    </div>
+				    <div class="price_modifier">
+				        &nbsp;
+				        For Sale
+				    </div>
+				  </div>
+				  <div class="descriptor descriptor-gray overflow-ellipsis">
+				    Lorem Ipsum
+				  </div>
+				  <ul class="reputation unstyled">
+				      <li class="badge badge_type_reviews-bubble">
+				        <span class="badge_image">
+				          <span class="badge_text reviews-bubble">
+				            55
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">reviews</span>
+				      </li>
+				      <li class="badge badge_type_other-reviews">
+				        <span class="badge_image">
+				          <span class="badge_text other-reviews">
+				            67
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">other reviews</span>
+				      </li>
+				  </ul>
+				  
+				</li>
+		 </ul>
+
+		<ul id="results" class="unstyled">
+		          <li id="room_557018" class="search_result" data-hosting-id="557018" data-host-id="2687671">
+				  <div class="pop_image_small">
+				    <a href="/rooms/557018" class="image_link matte-media-box" title="GREAT Private Room in Chelsea!">
+				        <img alt="GREAT Private Room in Chelsea!" class="search_thumbnail listing-default" width="114" height="74" src="https://a2.muscache.com/pictures/7082872/x_small.jpg" data-original="https://a2.muscache.com/pictures/7082872/x_small.jpg" title="GREAT Private Room in Chelsea!" style="display: inline;">
+				      
+				      <div class="map_number">1</div>
+				    </a>
+				  </div>
+
+				  <div class="user_thumb">
+				      <a href="/users/show/2687671" class="inset-media-box">
+				        <img alt="Tom" height="36" class="user-default" data-original="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" width="36" src="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" style="display: inline;">
+				        <div class="shadow"></div>
+				      </a>
+				  </div>
+
+				  <h3 class="room_title overflow-ellipsis">
+				    <a class="name" href="/rooms/557018">GREAT Private Room in Chelsea!</a>
+				  </h3>
+				  <div class="price">
+				    <div class="price_data">
+				      <sup>$</sup>85
+				    </div>
+				    <div class="price_modifier">
+				        &nbsp;
+				        For Sale
+				    </div>
+				  </div>
+				  <div class="descriptor descriptor-gray overflow-ellipsis">
+				    Lorem Ipsum
+				  </div>
+				  <ul class="reputation unstyled">
+				      <li class="badge badge_type_reviews-bubble">
+				        <span class="badge_image">
+				          <span class="badge_text reviews-bubble">
+				            55
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">reviews</span>
+				      </li>
+				      <li class="badge badge_type_other-reviews">
+				        <span class="badge_image">
+				          <span class="badge_text other-reviews">
+				            67
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">other reviews</span>
+				      </li>
+				  </ul>
+				  
+				</li>
+		 </ul>
+
+		<ul id="results" class="unstyled">
+		          <li id="room_557018" class="search_result" data-hosting-id="557018" data-host-id="2687671">
+				  <div class="pop_image_small">
+				    <a href="/rooms/557018" class="image_link matte-media-box" title="GREAT Private Room in Chelsea!">
+				        <img alt="GREAT Private Room in Chelsea!" class="search_thumbnail listing-default" width="114" height="74" src="https://a2.muscache.com/pictures/7082872/x_small.jpg" data-original="https://a2.muscache.com/pictures/7082872/x_small.jpg" title="GREAT Private Room in Chelsea!" style="display: inline;">
+				      
+				      <div class="map_number">1</div>
+				    </a>
+				  </div>
+
+				  <div class="user_thumb">
+				      <a href="/users/show/2687671" class="inset-media-box">
+				        <img alt="Tom" height="36" class="user-default" data-original="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" width="36" src="https://a2.muscache.com/users/2687671/profile_pic/1340309366/tiny.jpg" style="display: inline;">
+				        <div class="shadow"></div>
+				      </a>
+				  </div>
+
+				  <h3 class="room_title overflow-ellipsis">
+				    <a class="name" href="/rooms/557018">GREAT Private Room in Chelsea!</a>
+				  </h3>
+				  <div class="price">
+				    <div class="price_data">
+				      <sup>$</sup>85
+				    </div>
+				    <div class="price_modifier">
+				        &nbsp;
+				        For Sale
+				    </div>
+				  </div>
+				  <div class="descriptor descriptor-gray overflow-ellipsis">
+				    Lorem Ipsum
+				  </div>
+				  <ul class="reputation unstyled">
+				      <li class="badge badge_type_reviews-bubble">
+				        <span class="badge_image">
+				          <span class="badge_text reviews-bubble">
+				            55
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">reviews</span>
+				      </li>
+				      <li class="badge badge_type_other-reviews">
+				        <span class="badge_image">
+				          <span class="badge_text other-reviews">
+				            67
+				            
+				          </span>
+				        </span>
+				        <span class="badge_name">other reviews</span>
+				      </li>
+				  </ul>
+				  
+				</li>
+		 </ul>
+
+		</div>
+
+		<div class="span4">
+			<div class="sponsorednav">
+			<h4 class="sponsoredtitle">
+				Find Local Companies & Organizations
+				<i class="icon icon-caret-down position-right"></i>
+			</h4>
+				<div class="input-append" style="width: 100%;">
+				  <input class="span2" id="appendedInputButton" type="text" style="width:180px;margin-left: 15px;">
+				  <button class="btn" type="button">Search</button>
+				<div class="sponsored-result">
+				<h6>University Village Apartments</h6>
+					<div class="image_link matte-media-box" style="margin-right: 10px;">
+					 	<img alt="GREAT Private Room in Chelsea!" class="search_thumbnail listing-default" width="114" height="74" src="https://a2.muscache.com/pictures/7082872/x_small.jpg" data-original="https://a2.muscache.com/pictures/7082872/x_small.jpg" title="GREAT Private Room in Chelsea!" style="display: inline;">
+					 </div>
+					 <div class="color:black; float:right; width:50px; z-index:999;">
+					 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</div>
+					<%= link_to "View Page", new_merchant_session_path, class: "btn btn-small btn-inverse", :style => "margin-top:-5px;" %>
+				</div>
+				<div class="sponsored-result">
+				<h6>Insomnia Cookies</h6>
+					<div class="image_link matte-media-box" style="margin-right: 10px;">
+					 	<img alt="GREAT Private Room in Chelsea!" class="search_thumbnail listing-default" width="114" height="74" src="https://a2.muscache.com/pictures/7082872/x_small.jpg" data-original="https://a2.muscache.com/pictures/7082872/x_small.jpg" title="GREAT Private Room in Chelsea!" style="display: inline;">
+					 </div>
+					 <div class="color:black; float:right; width:50px; z-index:999;">
+					 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</div>
+					<%= link_to "View Page", new_merchant_session_path, class: "btn btn-small btn-inverse", :style => "margin-top:-5px;" %>
+				</div>
+				<div class="sponsored-result">
+				<h6>Funk & Waffles</h6>
+					<div class="image_link matte-media-box" style="margin-right: 10px;">
+					 	<img alt="GREAT Private Room in Chelsea!" class="search_thumbnail listing-default" width="114" height="74" src="https://a2.muscache.com/pictures/7082872/x_small.jpg" data-original="https://a2.muscache.com/pictures/7082872/x_small.jpg" title="GREAT Private Room in Chelsea!" style="display: inline;">
+					 </div>
+					 <div class="color:black; float:right; width:50px; z-index:999;">
+					 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</div>
+					<%= link_to "View Page", new_merchant_session_path, class: "btn btn-small btn-inverse", :style => "margin-top:-5px;" %>
+				</div>
+
+			</div>
+		</div>
+</div>
+
+</div>
+</div>
+<div style="margin-top:170px;">
+</div>

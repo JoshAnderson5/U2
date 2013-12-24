@@ -1,0 +1,68 @@
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+<% javascript_include_tag 'http://www.google.com/jsapi' %>
+<%= render 'dashboard/dashboard' %>
+
+	<% if user_signed_in? %>
+		<!--<%= render 'dashboard/useronboarding' %>-->
+	<h1>Dashboard</h1><br/>
+<div>
+	<div class="span12">
+		<h3>Revenue to Date</h3><br/>
+		<div class="swell" style="height: 200px;width: 980px;">
+			<div id='chart'></div>
+
+		</div>
+	</div>
+
+	<div class="span7">
+	<h5>Active Listings</h5>
+	<div class="swell" style="height: 500px;"></div>
+	</div>
+
+
+	<div class="span6">
+	<h5>Current Spread of Listings</h5>
+	<div class="swell" style="height: 200px;"></div>
+	</div>
+
+	<div class="span6">
+	<h5>College Community Verifications</h5>
+	<div class="swell">
+			In order to take part in the college marketplace you will need to verify a college (.edu) email address. Please use the textbox below to do so.
+
+			<%= simple_form_for(resource, :as => current_user, :url => registration_path(current_user), :html => { :method => :put, :class => 'form-horizontal'}) do |f| %>
+			               <div class="form-alignment"><%= f.input :name, placeholder: "Search", label: false %></div>
+			               <% end %>   
+						   <div style="margin-top: -10px;"><%= link_to "Verify .Edu Email", dashboard_referral_path, class: "btn btn-success" %></div>
+			<br/>
+			<%= link_to "+ Add Another School", root_path, class: "add-link" %>
+
+	</div>
+	</div>
+
+	<div class="span6">
+	<h5>Neighborhood Community Verifications</h5>
+	<div class="swell">
+			In order to take part in the neighborhood marketplace you will need to add a zipcode to join your respective neighborhood. Please use the textbox below to do so.
+
+			<%= simple_form_for(resource, :as => current_user, :url => registration_path(current_user), :html => { :method => :put, :class => 'form-horizontal'}) do |f| %>
+			               <div class="form-alignment"><%= f.input :name, placeholder: "Search", label: false %></div>
+			               <% end %>   
+						   <div style="margin-top: -10px;"><%= link_to "Submit", dashboard_referral_path, class: "btn btn-success" %></div>
+			<br/>
+			<%= link_to "+ Add Another School", root_path, class: "add-link" %>
+	</div>
+	</div>
+</div>
+	<% else %>
+			
+	<% end %>
+		
+</div>
+</div>
+<div style="margin-top:820px;">
+</div>
+
+
+

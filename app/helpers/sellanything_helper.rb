@@ -1,0 +1,2 @@
+module SellanythingHelper
+end

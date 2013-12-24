@@ -1,0 +1,22 @@
+<%= render 'dashboard/dashboard' %>
+
+			<% if user_signed_in? %>
+			<%= form_for @user, url: wizard_path do |f| %>
+			<!--<div class="step-title">Step 1:</div>-->
+			<div style="padding-left:20px;">
+				<div class="headerlinks">1. Welcome</div>
+				<div class="headerlinks">2. Services</div> 
+				<div class="headerlinks">3. Grant Access</div>
+				<div class="headerlinks">4. Get Started</div>
+			</div>
+
+			<%= yield %>
+
+			 <div class="actions" style="margin-left: 60px;">
+    <%= f.submit "Continue", class: "btn btn-success" %>
+    or <%= link_to "Go Back to Previous Step", previous_wizard_path %>
+  </div>
+<% end %>
+<% end %>
+
+

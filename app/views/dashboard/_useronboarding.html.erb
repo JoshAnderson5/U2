@@ -1,0 +1,31 @@
+<div class="page-title"><h1>Dashboard</h1></div>
+
+
+<div class="well">Revenue Tracker</div>
+
+<div class="verification-area">
+<h4>School Verification</h4>
+	In order to take part in the college marketplace you will need to verify a college (.edu) email address. Please use the textbox below to do so.
+
+<%= simple_form_for(resource, :as => current_user, :url => registration_path(current_user), :html => { :method => :put, :class => 'form-horizontal'}) do |f| %>
+               <div class="form-alignment"><%= f.input :name, placeholder: "Search", label: false %></div>
+               <% end %>   
+			   <div style="margin-top: -10px;"><%= link_to "Verify .Edu Email", dashboard_referral_path, class: "btn btn-success" %></div>
+<br/>
+<%= link_to "+ Add Another School", root_path, class: "add-link" %>
+
+
+</div>
+
+<div class="verification-area">
+<h4>Neighborhood Verification</h4>
+	In order to take part in the neighborhood marketplace you will need to add a zipcode to join your respective neighborhood. Please use the textbox below to do so.
+
+<%= simple_form_for(resource, :as => current_user, :url => registration_path(current_user), :html => { :method => :put, :class => 'form-horizontal'}) do |f| %>
+               <div class="form-alignment"><%= f.input :name, placeholder: "Search", label: false %></div>
+               <% end %>   
+			   <div style="margin-top: -10px;"><%= link_to "Submit", dashboard_referral_path, class: "btn btn-success" %></div>
+<br/>
+<%= link_to "+ Add Another School", root_path, class: "add-link" %>
+
+</div>

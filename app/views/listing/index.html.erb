@@ -1,0 +1,42 @@
+<%= render 'dashboard/dashboard' %>
+
+<div class="headerlinks">College Listings</div>
+<div class="headerlinks">College Settings</div>
+<br/>
+
+<div style="margin-top:30px;">
+<table class="table table-striped" style="margin-right:20px;">
+  <thead>
+    <tr>
+      <th><%= link_to "Website", :sort => "website" %></th>
+      <th><%= link_to "Item Name", :sort => "item_name" %></th>
+      <th><%= link_to "Date Added", :sort => "date" %></th>
+      <th><%= link_to "Listing Url", :sort => "listing_url" %></th>
+      <th><%= link_to "Options", :sort => "options" %></th>
+    </tr>
+  </thead>
+
+  <% @listings.each do |listing| %>
+  <tbody>
+    <tr>
+      <td><% listing.website %></td>
+      <td>listing.website</td>
+      <td>http://railscasts.com/episodes/340-datatables?view=asciicast</td>
+      <td><div class="btn-group">
+          <button class="btn">View</button>
+          <button class="btn">Edit</button>
+          <button class="btn">Delete</button>
+          </div></td>
+	</tr>
+  </tbody>
+  <% end %>
+</table>
+<p><%= link_to "New Listing", new_listing_path, class: "btn btn-success" %></p>
+</div>
+
+
+
+</div>
+</div>
+<div style="margin-top:320px;">
+</div>

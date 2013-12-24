@@ -1,0 +1,50 @@
+<div class="navbar navbar-fixed-top navbar-inverse" style="background: rgba(255, 255, 255, 1);height: 65px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);">
+
+   <div class="container">    
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse">
+          <% if user_signed_in? %>
+              <ul class="nav-white"> 
+                    <li style="float:left;margin-top:5px"><%= link_to image_tag("logo.png", :alt => "Uvalue Logo", :size => "200x120"), root_path %></li>
+                    <li class="masthead"><%= link_to "View My Profile", user_path(current_user) %></li>
+                    <li class="masthead"><%= link_to "Go to My Admin Dashboard", dashboard_home_path %></li>
+                     <span class="nav pull-right" style="height:15px;">
+                        <li class="masthead">  Signed in as <strong><%= current_user.name %></strong></li>
+                        <li class="masthead" > <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :style => "margin: -9px 10px 9px 0px; color: black;" %></li>
+                    </span>
+              </ul>
+          <% else %>
+              <ul class="nav-white"> 
+                    <li style="float:left; margin-top:5px"><%= link_to image_tag("logo.png", :alt => "Uvalue Logo", :size => "200x120"), root_path %></li>
+                    <li class="masthead"><%= link_to "Join Our Marketplace", root_path %></li>
+                    <li class="masthead"><%= link_to "Sell Your Items Online", pages_sellonline_path %></li>
+                    <li class="masthead"><%= link_to "Pricing", pages_pricing_path %></li>
+                    <span class="nav pull-right" style="top: 25px;"><%= link_to "User Login", new_user_session_path, class: "btn btn-small btn-success", :style => "margin-top:-5px;" %>
+                    <%= link_to "Business Login", new_merchant_session_path, class: "btn btn-small btn-inverse", :style => "margin-top:-5px;" %></span>
+              </ul>
+          <% end %>
+      </div>
+ </div> 
+</div>
+
+
+  <!--<div class= "sign-in">
+    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-large btn-primary" %>
+    <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter), class: "btn btn-large btn-primary" %>
+  </div>-->
+  
+
+<div class="alert-space">
+<% flash.each do |type, message| %>
+                <div class="alert ">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <%= message %>
+                </div>
+          <% end %>
+  </div>
+    
+
+    
+  
+        
+    

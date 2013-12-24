@@ -1,0 +1,62 @@
+<%= render :layout => 'membershiplayout' do |f| %>
+			
+			<div class="span12" style="margin-bottom: 20px; padding-left: 25px; margin-top: 20px; margin-right: 30px;margin-right:100%">
+			
+			<div class="span7" style="margin-right:160px;">
+					<div class="progress progress-striped active" >
+					  <div class="bar" style="width: 90%;"></div>
+					</div>
+				
+					<p>
+					<h2> Add Communities to Your Account </h2>
+					</p>
+
+					<div class="verification-area">
+					<h4>School Verification</h4>
+						In order to take part in the college marketplace you will need to verify a college (.edu) email address. Please use the textbox below to do so.<br/>
+
+					<%= simple_form_for(resource, :as => current_user, :url => registration_path(current_user), :html => { :method => :put, :class => 'form-horizontal'}) do |f| %>
+					               <div class="form-alignment" style="margin-top: 10px;"><%= f.input :name, placeholder: "Search", label: false %></div>
+					               <% end %>   
+								   <div style="margin-top: 5px;"><%= link_to "Verify .Edu Email", dashboard_referral_path, class: "btn btn-success" %></div>
+					<br/>
+					<%= link_to "+ Add Another School", root_path, class: "add-link" %>
+
+
+					</div>
+
+					<div class="verification-area">
+					<h4>Neighborhood Verification</h4>
+						In order to take part in the neighborhood marketplace you will need to add a zipcode to join your respective neighborhood. Please use the textbox below to do so.
+
+					<%= simple_form_for(resource, :as => current_user, :url => registration_path(current_user), :html => { :method => :put, :class => 'form-horizontal'}) do |f| %>
+					               <div class="form-alignment"><%= f.input :name, placeholder: "Search", label: false %></div>
+					               <% end %>   
+								   <div style="margin-top: -10px;"><%= link_to "Submit", dashboard_referral_path, class: "btn btn-success" %></div>
+					<br/>
+					<%= link_to "+ Add Another School", root_path, class: "add-link" %>
+
+					<br/><br/>
+					</div>
+			</div>
+
+
+			<div class="span3">
+					<h4>WHY CREATE A PROFILE?</h4>
+
+					<h6>Step-by-Step Help</h6>
+					Let us guide you each step of the way toward getting the best possible loan.</br>
+					<h6>Support When you Need It</h6>
+					We provide recommended calculators, articles and expert advice tailored to your needs.</br>
+					<h6>Check Your Status Online</h6>
+					Review the status of all your loan offers through one simple interface.</br>
+					</div>	
+				</div>		
+			<% end %>
+		</div>
+</div>
+
+</div>
+</div>
+<div style="margin-top:320px;">
+</div>

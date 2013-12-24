@@ -1,0 +1,54 @@
+
+<div class="college-background">
+<%= render 'layouts/navgeneral' %>
+<div class="container">
+	<!--<h1>College#home</h1>
+	<p>Find me in app/views/college/home.html.erb</p>-->
+	<div class="headline">Seamless Online Selling Experience</div>
+			<div class="site-description">
+				From one simple interface you will be able to seemlessly engage in any form of commerce available on the web today!
+
+			 <!--<span>Uvalue has evolved into a multichannel ecommerce platform, marrying the sales management services that allow users to sell on popular sites, such as Amazon, Ebay and Etsy, with local marketplace technology allow you to directly engage college and neighborhood communities with your products. From one simple interface you will be able to seemless be able to engage in any form of commerce available on the web today!</span>-->
+
+
+			 <% if user_signed_in? %>
+			<p style="margin-top:20px;">
+			 	 <%= link_to "Enter Marketplace", search_index_path, class: "btn btn-success btn-large" %>
+			 </p>
+			 <% else %>
+			<p style="margin-top:20px;">
+			 <%= link_to "Sign Up", user_membership_welcome_path , class: "btn btn-large btn-success", :style => "width:78%;" %>
+			  <!--<%= link_to "Sign In with Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-medium btn-primary" %>
+			<%= link_to "Sign In with Twitter", user_omniauth_authorize_path(:twitter), class: "btn btn-medium btn-info" %>-->
+			  </p>
+			  <% end %>
+			</div>
+
+
+	</div>
+</div>
+<!--<div class="midbar">
+	<div class="container">
+	<li><%= link_to root_path do %>College<% end  %></li>
+	<li><%= link_to neighborhoods_home_path do %>Neighborhoods<% end  %></li>
+	<li><%= link_to sellanything_home_path do %>Sell Anything<% end  %></li>
+	<li><%= link_to business_home_path do %>Business<% end  %></li>
+</div>-->
+<div class="container">
+
+
+</div></div>
+<div style="min-height:30px;">
+	<div class="white-area">
+	<div id="how-does-it-work"><h5>How does it work?</h5><h2>User Our Selling Management Dashboard</h2><p>With the Uvalue Dashboard not only will you be able to manage your ecommerce web presence<br>You will also be able to monitor the status of your items across multiple websites to avoid wasting time. </p>
+		 <%= link_to image_tag("amazon.jpg", :alt => "Amazon", :size => "138x54"), root_path, :style => "margin-left: 10px;" %>
+		  <%= link_to image_tag("ebay.jpg", :alt => "Ebay", :size => "138x54"), root_path, :style => "margin-left: 10px;" %>
+		   <%= link_to image_tag("etsy.jpg", :alt => "Etsy", :size => "138x54"), root_path, :style => "margin-left: 10px;" %>
+		    <%= link_to image_tag("magneto.jpg", :alt => "Magneto", :size => "138x54"), root_path, :style => "margin-left: 10px;" %>
+		</div>
+</div>
+		
+
+
+<!--<section class="wrap wrap-beige center" id="social-bandwidth" style="background: whiteSmoke;"><div class="container"><header class="block-head"><h5>Why is it different?</h5><h2>The more you share, the more FREE data you earn.</h2></header><p>Your Karma hotspot has an open Wi-Fi signal. Anyone around can connect to it. <br>When they do you'll both receive 100MB of free data. It's Social Bandwidth. <a href="/tour">Learn more »</a></p><figure><img alt="Social bandwidth" src="https://d2zd51ski5qnr9.cloudfront.net/assets/graphic-social-bandwidth-3-1e95acdf86548d929ee3b3f0d1ffe952.jpg"></figure></div></section>
+</div>-->

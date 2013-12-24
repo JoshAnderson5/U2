@@ -1,0 +1,40 @@
+<%= render 'dashboard/dashboard' %>
+<h1>Listing sellers</h1>
+
+<table class="table table-striped" >
+  <tr>
+    <th style="width: 20%;">Item name</th>
+    <th style="width: 10%;">Channel</th>
+    <th style="width: 10%;">Listing price</th>
+    <!--<th style="width: 8%;">Item condition</th>
+    <th style="width: 8%;">City</th>
+    <th style="width: 12%;">State</th>-->
+    <th style="width: 10%;">Sku</th>
+    <th style="width: 20%;">Listing url</th>
+    <th style="width: 10%;">Seller</th>
+    <th></th>
+  </tr>
+
+<% @sellers.each do |seller| %>
+  <tr>
+    <td><%= seller.item_name %></td>
+    <td><%= seller.channel %></td>
+    <td><%= seller.listing_price %></td>
+    <!--<td><%= seller.item_condition %></td>
+    <td><%= seller.city %></td>
+    <td><%= seller.state %></td>-->
+    <td><%= seller.sku %></td>
+    <td><%= seller.listing_url %></td>
+    <td><%= seller.seller_id %></td>
+    <td>
+    <div class="btn-group">
+    <button class="btn"><%= link_to 'View', seller %></button>
+    <button class="btn"><%= link_to 'Edit Listing', edit_seller_path(seller) %></button>
+    <button class="btn"><%= link_to 'Delete', seller, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Create New Listing', new_seller_path, class: "btn btn-success" %>

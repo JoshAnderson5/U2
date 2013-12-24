@@ -1,0 +1,35 @@
+
+<div class="sellanything-background">
+<%= render 'layouts/navgeneral' %>
+	<div class="container">
+	<!--<h1>College#home</h1>
+	<p>Find me in app/views/college/home.html.erb</p>-->
+	<div class="headline-sell">Sell Your Items on Amazon, Ebay, & More</div>
+			<div class="site-description-sell">
+			
+			 <span style="font-size:14px;">Uvalue offers a <b>ecommerce selling service</b> where  we sell and manage listings for you on Amazon, Ebay, and Etsy. When the item sells we’ll give you the shipping details and a payout to your account. Uvalue uses marketplace and listing techniques to make online and offline commerce simpler for consumers and businesses</span>
+
+
+
+			  <% if user_signed_in? %>
+			<p style="margin-top:20px;">
+			 	 <%= link_to "Enter Marketplace", new_user_session_path, class: "btn btn-success btn-large" %>
+			 </p>
+			 <% else %>
+			<p style="margin-top:20px;">
+			  <%= link_to "Sign In with Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-large btn-primary" %>
+			<%= link_to "Sign In with Twitter", user_omniauth_authorize_path(:twitter), class: "btn btn-large btn-info" %>
+			  </p>
+			  <% end %>
+			</div>
+
+	</div>
+</div>
+<div class="midbar">
+	<div class="container">
+	<li><%= link_to college_home_path do %>College<% end  %></li>
+	<li><%= link_to neighborhoods_home_path do %>Neighborhoods<% end  %></li>
+	<li><%= link_to sellanything_home_path do %>Sell Anything<% end  %></li>
+	<li><%= link_to business_home_path do %>Business<% end  %></li>
+</div>
+</div>

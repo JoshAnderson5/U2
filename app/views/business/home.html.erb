@@ -1,0 +1,35 @@
+
+<div class="business-background">
+<%= render 'layouts/navgeneral' %>
+	<div class="container">
+		
+	<!--<h1>College#home</h1>
+	<p>Find me in app/views/college/home.html.erb</p>-->
+	<div class="headline-business" style="margin-right: 60px;">Uvalue Offers Enterprise Services</div>
+			<div class="site-description-business" style="height:110px;">
+
+			 <span style="font-size:14px;">Uvalue offers <b>businesses</b> the ability to target their products or listings to specific demographics based on location and profile of the consumer. Businesses also are provided a dashboard where they can access premium features. Uvalue uses marketplace and listing techniques to make online and offline commerce simpler for consumers and businesses</span>
+
+
+			  <% if user_signed_in? %>
+			<p style="margin-top:20px;">
+			 	 <%= link_to "Enter Marketplace", new_user_session_path, class: "btn btn-success btn-large" %>
+			 </p>
+			 <% else %>
+			<p style="margin-top:20px;">
+			  <%= link_to "Creat an Account", new_user_registration_path, class: "btn btn-success btn-large" %>
+			  <%= link_to "Log in", new_user_session_path, class: "btn btn-success btn-large" %>
+			  </p>
+			  <% end %>
+			</div>
+
+	</div>
+</div>
+<div class="midbar">
+	<div class="container">
+	<li><%= link_to college_home_path do %>College<% end  %></li>
+	<li><%= link_to neighborhoods_home_path do %>Neighborhoods<% end  %></li>
+	<li><%= link_to sellanything_home_path do %>Sell Anything<% end  %></li>
+	<li><%= link_to business_home_path do %>Business<% end  %></li>
+</div>
+</div>

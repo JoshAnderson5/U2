@@ -1,0 +1,53 @@
+<%= form_for(@seller) do |f| %>
+  <% if @seller.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@seller.errors.count, "error") %> prohibited this seller from being saved:</h2>
+
+      <ul>
+      <% @seller.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :item_name %><br />
+    <%= f.text_field :item_name %>
+  </div>
+  <div class="field">
+    <%= f.label :channel %><br />
+    <%= f.text_field :channel %>
+  </div>
+  <div class="field">
+    <%= f.label :listing_price %><br />
+    <%= f.text_field :listing_price %>
+  </div>
+  <div class="field">
+    <%= f.label :item_condition %><br />
+    <%= f.text_field :item_condition %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :sku %><br />
+    <%= f.text_field :sku %>
+  </div>
+  <div class="field">
+    <%= f.label :listing_url %><br />
+    <%= f.text_field :listing_url %>
+  </div>
+  <div class="field">
+    <%= f.label :seller_id %><br />
+    <%= f.number_field :seller_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

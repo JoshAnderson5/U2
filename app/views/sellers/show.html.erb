@@ -1,0 +1,51 @@
+<%= render 'dashboard/dashboard' %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Item name:</b>
+  <%= @seller.item_name %>
+</p>
+
+<p>
+  <b>Channel:</b>
+  <%= @seller.channel %>
+</p>
+
+<p>
+  <b>Listing price:</b>
+  <%= @seller.listing_price %>
+</p>
+
+<p>
+  <b>Item condition:</b>
+  <%= @seller.item_condition %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @seller.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @seller.state %>
+</p>
+
+<p>
+  <b>Sku:</b>
+  <%= @seller.sku %>
+</p>
+
+<p>
+  <b>Listing url:</b>
+  <%= @seller.listing_url %>
+</p>
+
+<p>
+  <b>Seller:</b>
+  <%= @seller.seller_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_seller_path(@seller) %> |
+<%= link_to 'Back', sellers_path %>

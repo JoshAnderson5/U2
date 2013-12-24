@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Uvalue: Rails Version - My Presence</title>
+  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+  <%= stylesheet_link_tag    "dashboard", :media => "all" %>
+  <%= javascript_include_tag "dashboard" %>
+  <%= csrf_meta_tags %>
+</head>
+    <body>
+<%= render 'layouts/navinner' %>
+<div class="">
+
+<div class="row">
+<div class="span3" style="margin-top:30px;">
+<!--<%= link_to image_tag("SquareLogo.png", :alt => "Uvalue Logo", :style => "width:150px;margin-left:30px;"), dashboard_home_path %>-->
+			<p style="height:30px"></p>
+			<ul>
+				<li class="sidebar-link"><i class="icon-user"></i><%= link_to "Dashboard", dashboard_home_path %></li>
+				<li class="sidebar-link"><i class="icon-user"></i><%= link_to "My Presence", dashboard_mypresence_path %> </li>
+				<li class="sidebar-link"><i class="icon-bullhorn"></i><%= link_to "Inventory", sellers_path %> </li>
+				<li class="sidebar-link"><i class="icon-bullhorn"></i><%= link_to "College", dashboard_college_path %> </li>
+				<li class="sidebar-link"><i class="icon-globe"></i><%= link_to "Neighborhood", dashboard_neighborhoods_path %> </li>
+				<li class="sidebar-link" style="margin-bottom:30px;"><i class="icon-bullhorn"></i><%= link_to "Sell Anything", dashboard_sellanything_path %> </li>
+			</ul>
+			<br/>
+			<p style="margin-top:30px"></p>
+			<ul style="margin-top:20px;">
+				<li class="sidebar-link"><i class="icon-user"></i><%= link_to "Membership", user_membership_welcome_path %> </li>
+				<li class="sidebar-link"><i class="icon-thumbs-up"></i><%= link_to "Referal", dashboard_referral_path %> </li>
+			</ul>
+			
+			<ul style="margin-top:20px;">
+				<li class="sidebar-link-black" style="margin-top: 70px;"><i class="icon-user"></i><%= link_to "Go to Marketplace", search_index_path %> </li>
+			</ul>
+		</div>
+<div class="span12" style="position:absolute;margin-top:30px; background-color:white; min-height:700px; width:80%; padding-left: 10px;padding-right: 10px;margin-left: 235px;-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);box-shadow: 0px 0 8px 2px rgba(0, 0, 0, 0.09);">

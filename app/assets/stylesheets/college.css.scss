@@ -1,0 +1,126 @@
+// Place all the styles related to the college controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div ::-webkit-scrollbar  {
+    width: 12px;
+}
+ 
+div ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+div ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+
+.college-full {
+	margin-top: -9px;
+	width: 100%;
+height: 400px;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.college-homepage-title {
+position: absolute;
+text-align: center;
+width: 100%;
+z-index: 20;
+background: none;
+top: 22%;
+bottom: auto;
+}
+
+.college-homepage-tagline {
+	font-size: 23px;
+font-weight: bold;
+margin-bottom: 15px;
+text-shadow: 0 0 12px rgba(0,0,0,0.85);
+color:white;
+}
+
+.hpcollege-name {
+	font-size: 64px;
+text-shadow: 0 1px 7px #000;
+color:white;
+}
+
+.ticker {
+	padding-top:30px;
+	background-color: #FFFFFF;
+border-top: 1px solid #ebe8e4;
+border-bottom: 1px solid #ebe8e4;
+color: #45494d;
+	height:50px;
+	width:100%;
+}
+
+.overlay {
+position: absolute;
+text-align: center;
+margin-bottom: 20px;
+bottom: 0;
+z-index: 30;
+height: 120px;
+width: 100%;
+top: 48%;
+color: #FFFFFF;
+text-shadow: 0 1px 7px #000;
+font-weight: bolder;
+}
+
+/**** Online Users *******/
+
+.verified_table tr.grayline td {
+border-bottom: 1px solid #c8c8ca;
+padding: 9px 0 9px 0;
+color: #4f4f4f;
+font: bold 11px/40px Helvetica, Arial, sans-serif;
+}
+
+.online-image {
+	-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+display: inline-block;
+position: relative;
+z-index: 0;
+height: 45px;
+width: 45px;
+}
+
+.header-tag h4 {
+	background-color: rgba(250,250,250,0.9);
+background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.9) 0%,rgba(250,250,250,0.9) 100%);
+background-image: -moz-linear-gradient(top, rgba(255,255,255,0.9) 0%,rgba(250,250,250,0.9) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5ffffff', endColorstr='#e5fafafa', GradientType=0);
+border-bottom: 1px solid #d0d0d0;
+padding: 5px 15px;
+-webkit-box-shadow: 0 2px 2px -2px rgba(0,0,0,0.2),0 0 0 #000;
+box-shadow: 0 2px 2px -2px rgba(0,0,0,0.2),0 0 0 #000;
+border-top: 1px solid #d0d0d0;
+}
+
+td a {
+	font-size: 10pt;
+text-decoration: none;
+text-align: center;
+vertical-align: middle;
+}
+
+td a:hover {
+	font-size: 10pt;
+text-decoration: none;
+text-align: center;
+vertical-align: middle;
+}
+
+.wrapper {
+	overflow-y: scroll; overflow-x:hidden;
+}

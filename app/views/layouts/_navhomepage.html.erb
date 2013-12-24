@@ -1,0 +1,35 @@
+
+<div class="navbar ">
+  <div class="navbar-inner navbar-inverse">
+        
+        <div style="float:left;"><%= link_to image_tag("logo.png", :alt => "Uvalue Logo", :size => "200x120"), root_path %></div>
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+        <li><%= link_to "Home", root_path %></li>
+		</ul>
+
+		<ul class="nav pull-right">
+      <% if user_signed_in? %>
+       <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+       <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+      <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <li><%= link_to "Login", new_user_session_path %></li>
+      <% end %>
+        
+		<!--<li><%= link_to "Sign Up", '#' %></li>-->
+		</ul>
+<!-- .nav, .navbar-search, .navbar-form, etc -->
+      </div>
+
+  <div class="alert-space">
+<% flash.each do |type, message| %>
+                <div class="alert ">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <%= message %>
+                </div>
+          <% end %>
+  </div>
+</div>
+</div>

@@ -1,0 +1,45 @@
+
+<body>
+<div class="container">
+
+
+<div style="margin-top:20px; margin-bottom:10px; text-align:center;"><%= link_to image_tag("logo.png", :alt => "Uvalue Logo"), root_path %></div>
+
+<div style="text-align:center; margin-bottom: 30px;">
+<%= link_to "User Sign In", user_session_path, class: "btn btn-medium btn-inverse" %>
+<%= link_to "Merchant Sign In", merchant_session_path, class: "btn btn-medium btn-inverse" %>
+</div>
+
+<div class="form-signin">
+
+<div class="signin-left">
+<p style="text-align:center;">
+<%= link_to "Sign In with Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-medium btn-primary" %>
+<%= link_to "Sign In with Twitter", user_omniauth_authorize_path(:twitter), class: "btn btn-medium btn-info" %>
+</p>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div>
+  <%= f.email_field :email, :autofocus => true, placeholder: "Email Address" %></div>
+
+  <div>
+  <%= f.password_field :password, placeholder: "Password" %></div>
+
+  <% if devise_mapping.rememberable? -%>
+  <%= f.check_box :remember_me %> Remember Me <br/>
+  <% end -%>
+
+<p>
+  <div><%= f.submit "                          Sign in                           ", class: "btn btn-large btn-success", style:"text-align:center;" %></div>
+<% end %>
+</div>
+
+<div class="signin-right">
+<%= render "devise/shared/links" %>
+</div>
+</div>
+
+
+
+
+</div></div>
